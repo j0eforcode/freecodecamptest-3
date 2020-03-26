@@ -1,0 +1,110 @@
+<html>
+<head>
+    <style>
+        /* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* box-sizing and font sizing */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+
+  /* Set font size for easy rem calculations
+   * default document font size = 16px, 1rem = 16px, 100% = 16px
+   * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+  */
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--main-red);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+.nav-list {
+  display: flex;
+  margin-right: 2rem;
+}
+
+@media (max-width: 28.75em) {
+  .nav {
+    justify-content: center;
+  }
+
+  .nav-list {
+    margin: 0 1rem;
+  }
+}
+
+.nav-list a {
+  display: block;
+  font-size: 2.2rem;
+  padding: 2rem;
+}
+
+.nav-list a:hover {
+  background: var(--main-blue);
+}
+
+
+
+        @media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+  html {
+    font-size: 58%;
+  }
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+
+    </style>
+</head>
+<body>
+<section id="welcome-section">
+    <h1>j0eforcode's portfolio</h1>
+    <h2>have fun</h2>
+    <nav id="navbar">
+        <h4>links</h4>
+        <ul>
+            <li><a class="nav-link" href="#projects">Different Projects</a></li>
+            <li><a class="nav-link" id="profile-link" href="https://github.com/j0eforcode/" target="_blank">Github Profile</a></li>
+        </ul>
+    </nav>
+</section>
+<section id="projects">
+    <header id="project-title">Project 1</header>
+    <a href="https://j0eforcode.github.io/freecodecamptest-3/" target="_blank">This is a page for my first project hosted on github.</a>
+
+</section>
+
+</body>
+
+</html>
